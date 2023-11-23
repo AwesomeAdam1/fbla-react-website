@@ -1,7 +1,15 @@
-function Gala() {
+import Event from '../Components/Event'
+
+function Events() {
     return (
-        <p>Text</p>
+        <>
+            <Event name='Gala' imgSrc='../Resources/GalaPhoto.jpg'/>
+            <Event />
+            <Event />
+            <Event />
+            <Event />
+        </>
     );
 }
 
-export default Gala;
+export default Events;
