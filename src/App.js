@@ -1,16 +1,21 @@
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Donate from './Donate';
+import About from './About';
+import Events from './Events';
+import NavBar from './Components/NavBar';
 
 function App() {
-  return (
-     <>
-     <Routes>
-          <Route path="/home" element={<p></p>} />
-          <Route path="/donate" element={<p></p>} />
-          <Route path="/about" element={<p></p>} />
-          <Route path="/events" element={<p></p>} />
-       </Routes>
-     </>
-  );
+    return (
+        <>
+            <NavBar />
+            <Routes>
+                <Route path="/donate" element={<Donate />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/events" element={<Events />} />
+            </Routes>
+        </>
+        
+    );
 }
 
 export default App;
