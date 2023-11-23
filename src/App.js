@@ -3,7 +3,6 @@ import Home from './Pages/Home'
 import Donate from './Pages/Donate';
 import About from './Pages/About';
 import Gala from './Pages/Gala';
-import Home from './Pages/Home';
 import NavBar from './Components/NavBar';
 
 function App() {
