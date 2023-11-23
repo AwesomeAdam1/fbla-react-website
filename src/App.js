@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import Donate from './Donate';
-import About from './About';
-import Gala from './Gala';
-import NavBar from '../Components/NavBar';
+import Donate from './Pages/Donate';
+import About from './Pages/About';
+import Gala from './Pages/Gala';
+import NavBar from './Components/NavBar';
 
 function App() {
     return (
@@ -13,6 +13,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/gala" element={<Gala />} />
             </Routes>
+            <Gala />
         </>
         
     );
