@@ -4,7 +4,7 @@ const NavBar = () => {
  return (
    <div> 
       <nav class="bg-teal-400 p-3">
-         <div class="inline-block"> 
+         <div class="inline-block justify-between"> 
             <NavLink to="/home">Home</NavLink>
          </div>
          <div class="inline-block"> 
