@@ -10,11 +10,11 @@ function App() {
         <>
             <NavBar />
             <Routes>
+                <Route path="/home" element={<Home />} />
                 <Route path="/donate" element={<Donate />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/gala" element={<Gala />} />
             </Routes>
-            <Home />
         </>
         
     );
