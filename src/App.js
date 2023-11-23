@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Donate from './Donate';
 import About from './About';
 import Events from './Events';
-import NavBar from './Components/NavBar';
+import NavBar from './NavBar';
 
 function App() {
     return (
