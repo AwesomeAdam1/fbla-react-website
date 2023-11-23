@@ -1,6 +1,6 @@
 function Donate() {
     return (
-        <p>Text</p>
+        <p class="text-red-500">Text 123</p>
     );
 }
 
