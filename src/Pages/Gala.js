@@ -1,7 +1,7 @@
-function Events() {
+function Gala() {
     return (
         <p>Text</p>
     );
 }
 
-export default Events;
+export default Gala;
