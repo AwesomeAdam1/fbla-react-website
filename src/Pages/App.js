@@ -14,7 +14,6 @@ function App() {
                 <Route path="/gala" element={<Gala />} />
             </Routes>
         </>
-        
     );
 }
 
