@@ -5,13 +5,18 @@ function Event(props) {
         <>
             <h1>{props.name}</h1>
             {props.img}
+            
+            <section id="registered">
+                <h2>Number of People Registered: {props.numRegistered}</h2>
+            </section>
 
         </>
     )
 
     Event.defaultProps = {
         name: Event,
-        img: DefaultImageSrc
+        img: DefaultImage,
+        numRegistered: '0'
     }
 }
 
