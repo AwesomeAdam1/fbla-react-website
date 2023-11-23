@@ -14,7 +14,7 @@ const NavBar = () => {
             <NavLink to="/donate">Donate</NavLink>
          </div>
          <div class="inline-block mx-2"> 
-            <NavLink to="/gala">Gala</NavLink>
+            <NavLink to="/upcomingevents">Upcoming Events</NavLink>
          </div>
          <div class="inline-block absolute right-full right-6">
             Habitat for Humanity

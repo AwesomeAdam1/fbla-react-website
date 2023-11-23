@@ -9,7 +9,7 @@ function Event(props) {
     }
     
     return (
-        <>
+        <div className='Event'>
             <h1>{props.name}</h1>
             <img src={props.imgSrc} />
             
@@ -17,7 +17,7 @@ function Event(props) {
                 <h2>Number of People Registered: {props.numRegistered}</h2>
                 <h3>People Registered for this Event: {props.pplRegistered}</h3>
             </section>
-        </>
+        </div>
     )
 }
 
