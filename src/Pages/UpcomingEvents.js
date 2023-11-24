@@ -12,7 +12,7 @@ function Events() {
         <>
             <h1>Upcoming Events</h1>
 
-            <Event name='Gala' imgSrc={galaImg} numRegistered='500' pplRegistered='Person 1, Person 2, Person 3'/>
+            <Event name='Gala' imgSrc={galaImg} date='12/31/2023' numRegistered='500' pplRegistered={['Adam Wang', 'Vipul Bansal', 'Jesse Lan', 'Arnav Singh', 'Harry Le']}/>
             <Event />
             <Event />
             <Event />
