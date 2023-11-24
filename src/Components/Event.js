@@ -1,22 +1,29 @@
-import DefaultImage from '../Resources/DefaultImage.jpg'
-
 function Event(props) {
     Event.defaultProps = {
         name: 'Event',
-        imgSrc: {DefaultImage},
+        date: 'DD/MM/YYYY',
         numRegistered: '0',
         pplRegistered: 'Nobody :('
     }
+
+    const eventStyle = {
+        backgroundImage: `url(${props.imgSrc})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        height: '20rem',
+        backgroundPosition: 'center'
+    }
     
     return (
-        <div className='Event'>
-            <h1>{props.name}</h1>
-            <img src={props.imgSrc} />
-            
-            <section id="registered">
-                <h2>Number of People Registered: {props.numRegistered}</h2>
-                <h3>People Registered for this Event: {props.pplRegistered}</h3>
-            </section>
+        <div className="event" style={eventStyle}>
+            <div className="event-info">
+                <h1>{props.name}</h1>
+                <p className="date">{props.date}</p>
+            </div>
+            <div className='registration-info'>
+                    <p>Number Registered: {props.numRegistered}</p>
+                    <p>People Registered: {props.pplRegistered}</p>
+            </div>
         </div>
     )
 }
