@@ -1,3 +1,69 @@
-.Event {
-    margin-bottom: 2rem;
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+}
+.event {
+    margin: 2%;
+    padding: 0 5%;
+
+    color: white;
+
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .5);
+    text-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+}
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event h1 {
+    text-align: left;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.date {
+    position: relative;
+    top: 2.25rem;
+
+    font-size: 2.5rem;
+}
+
+.registration-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    font-size: 1.5rem;
+}
+
+.registration-info p {
+    font-weight: bold;
+    text-align: left;
+
+    text-shadow: 2.5px 2.5px 5px black;
+}
+
+.registered-person-table {
+    height: 9.5rem;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.registered-person-table table {
+    width: 100%;
+}
+
+.registered-person-table tr {
+    display: block;
+    padding-left: 1rem;
+    border: solid .125rem white;
+}
+
+.registered-person-table tr:not(:first-child) {
+    margin-top: -.125rem;
 }
