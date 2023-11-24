@@ -10,7 +10,10 @@ function Home() {
         <div class="inline-block left-1/3 border-green-500">
           Quote 3
         </div>
+        
+        <p>HOME</p>
       </div>
+      
     );
 }
 
