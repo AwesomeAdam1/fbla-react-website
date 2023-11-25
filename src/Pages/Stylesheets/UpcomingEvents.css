@@ -67,3 +67,11 @@ h1 {
 .registered-person-table tr:not(:first-child) {
     margin-top: -.125rem;
 }
+
+.event-registration-button {    
+    margin-top: 0.5rem;
+    padding: .5rem 1rem;
+
+    background-color: lightcoral;
+    border-radius: 5px;
+}
