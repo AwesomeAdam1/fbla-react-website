@@ -39,7 +39,7 @@ function Event(props) {
                     <p>People Registered: Nobody :(</p>
                 </div>
 
-                <EventForm displayStatus={displayStatus}/>
+                <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
             </div>
         )
     } else {
@@ -69,7 +69,7 @@ function Event(props) {
                         </div>
                 </section>
 
-                <EventForm displayStatus={displayStatus}/>
+                <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
             </div>
         )
     }
