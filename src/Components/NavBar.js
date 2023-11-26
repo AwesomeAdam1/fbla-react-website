@@ -2,25 +2,15 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
  return (
-   <nav class="bg-teal-400 p-2">
-      <div> 
-         <div class="inline-block mx-2"> 
-            <NavLink to="/home">Home</NavLink>
-         </div>
-         <div class="inline-block mx-2"> 
-            <NavLink to="/about">About</NavLink>
-         </div>
-         <div class="inline-block mx-2"> 
-            <NavLink to="/donate">Donate</NavLink>
-         </div>
-         <div class="inline-block mx-2"> 
-            <NavLink to="/upcomingevents">Upcoming Events</NavLink>
-         </div>
-         <div class="inline-block mx-2">
-            Habitat for Humanity
-         </div>
-      </div>
-   </nav>
+   <div>
+     <ul class="menu menu-vertical lg:menu-horizontal bg-base-300 rounded-box w-full">
+      <li><NavLink to="/home">Home</NavLink></li>
+      <li><NavLink to="/about">About</NavLink></li>
+      <li><NavLink to="/donate">Donate</NavLink></li>
+      <li><NavLink to="/upcomingevents">Upcoming Events</NavLink></li>
+     </ul> 
+   </div>
+   
  );
 };
 
