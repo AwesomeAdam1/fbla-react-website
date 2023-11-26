@@ -1,7 +1,7 @@
 import galaImg from '../Resources/GalaPhoto.jpg'
 import defaultImg from '../Resources/DefaultImage.jpg'
 
-function Slideshow(){
+function RecentEvents(){
   return (
     <div class="text-center">
       <div className="carousel w-1/2 h-96 m-5 rounded-2xl">
@@ -38,4 +38,4 @@ function Slideshow(){
   )   
 }
 
-export default Slideshow;
+export default RecentEvents;
