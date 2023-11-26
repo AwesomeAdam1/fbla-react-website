@@ -75,3 +75,71 @@ h1 {
     background-color: lightcoral;
     border-radius: 5px;
 }
+
+/* Registration Form Styling */
+.EventForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5%;
+    z-index: 3;
+
+    background-color: rgba(112, 128, 144, 0.975);
+    border-radius: 1rem;
+
+    font-size: 1.35rem;
+    text-shadow: none;
+}
+
+.EventForm h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.EventForm div {
+    margin: 1rem 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.EventForm input {
+    margin-left: 0.5rem;
+    padding-left: 2.5%;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.EventForm input:active {
+    background-color: white;
+}
+
+.EventForm ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+
+.submit {
+    margin-top: 1.75rem;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: darkslategray;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.x {
+    background-color: none;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.x:hover {
+    cursor: pointer;
+}
