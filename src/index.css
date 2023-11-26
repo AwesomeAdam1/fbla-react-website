@@ -13,3 +13,7 @@ ul li a:hover {
 ul li a.active {
   color: #00a8ff;
 } 
+
+body {
+  background-color: rgb(249, 249, 249)
+}

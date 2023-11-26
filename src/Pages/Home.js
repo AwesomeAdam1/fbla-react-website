@@ -1,29 +1,39 @@
+import Quotes from '../Components/Quotes';
+import Slideshow from '../Components/Slideshow';
+
 function Home() {
-    return (
-      <>
-        <div>
-          <img src=""></img>
-        </div>
-        <div class="border-indigo-400 border-2 mx-2 flex grid grid-flow-col justify-stretch m-2"> 
-          <div class="border-solid border-2 border-sky-500 m-3 p-3 rounded-lg h-40 flex inline-block justify-center items-stretch">
-            <div>
-              <p class="text-red-500 align-middle">Quote 1</p>
-            </div>
-          </div>
-          <div class="border-solid border-2 border-sky-500 m-3 p-3 rounded-lg h-40 flex inline-block justify-center items-stretch">
-            <p class="text-red-500 align-middle">Quote 2</p>
-          </div>
-          <div class="border-solid border-2 border-sky-500 m-3 p-3 rounded-lg h-40 flex inline-block justify-center items-stretch">
-            <p class="text-red-500 align-middle">Quote 3</p>
-          </div>
-        </div>
-        <div class="m-2">
-          <p>
-            welcome to fbla nerds 
+  return (
+    <>
+    <div class="flex flex-col w-full">
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+        <div class="text-center">
+          <p class="text-7xl m-12">
+            Recent Events
           </p>
         </div>
-      </>
-    );
+        <Slideshow />
+      </div> 
+      <div class="divider"></div> 
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+        <div class="text-center">
+          <p class="text-7xl m-12">
+            Upcomming Events
+          </p>
+        </div>
+        <Slideshow />
+      </div>
+      <div class="divider"></div> 
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+      <div class="text-center">
+          <p class="text-5xl m-12">
+            Volunteer Quotes
+          </p>
+        </div>
+        <Quotes />
+      </div>
+    </div>
+    </>   
+  );
 }
 
 export default Home;
