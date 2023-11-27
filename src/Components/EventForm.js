@@ -1,13 +1,13 @@
 import React from 'react'
 
 // FontAwesome Imports
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function EventForm(props) {
     return(
         <section className='EventForm' style={{display: props.displayStatus}}>
-            {/* <FontAwesomeIcon icon={ faXmark } className='x' onClick={props.handleClick}/> */}
+            <FontAwesomeIcon icon={ faXmark } className='x' onClick={props.handleClick}/>
             <h1>Register for {props.event}</h1>
             <form>
                 <div>
