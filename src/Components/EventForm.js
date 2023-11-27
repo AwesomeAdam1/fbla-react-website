@@ -17,7 +17,7 @@ function EventForm(props) {
 
                 <div>
                     <label>Phone Number: </label>
-                    <input type='number' placeholder='(123) 456-7890'/>
+                    <input type='tel' placeholder='(123) 456-7890'/>
                 </div>
 
                 <div>

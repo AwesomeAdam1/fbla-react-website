@@ -2,13 +2,6 @@ import React, {useState} from 'react'
 import EventForm from './EventForm'
 
 function Event(props) {
-    Event.defaultProps = {
-        name: 'Event',
-        date: 'DD/MM/YYYY',
-        numRegistered: '0',
-        pplRegistered: 'Nobody :('
-    }
-
     const eventStyle = {
         backgroundImage: `url(${props.imgSrc})`,
         backgroundRepeat: 'no-repeat',
@@ -73,6 +66,13 @@ function Event(props) {
             </div>
         )
     }
+}
+
+Event.defaultProps = {
+    name: 'Event',
+    date: 'DD/MM/YYYY',
+    numRegistered: '0',
+    pplRegistered: 'Nobody :('
 }
 
 export default Event
