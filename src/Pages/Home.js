@@ -14,7 +14,7 @@ function Home() {
         </div>
         <RecentEvents />
       </div> 
-      <div class="divider"></div> 
+      <div class="divider w-2/3 mx-auto"></div> 
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
         <div class="text-center">
           <p class="text-7xl m-12">
@@ -23,7 +23,7 @@ function Home() {
         </div>
         <UpcomingEvents />
       </div>
-      <div class="divider"></div> 
+      <div class="divider w-2/3 mx-auto"></div> 
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
       <div class="text-center">
           <p class="text-5xl m-12">
