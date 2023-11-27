@@ -1,5 +1,6 @@
 import Quotes from '../Components/Quotes';
-import Slideshow from '../Components/Slideshow';
+import RecentEvents from '../Components/RecentEvents';
+import UpcomingEvents from '../Components/UpcomingEvents';
 
 function Home() {
   return (
@@ -11,16 +12,16 @@ function Home() {
             Recent Events
           </p>
         </div>
-        <Slideshow />
+        <RecentEvents />
       </div> 
       <div class="divider"></div> 
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
         <div class="text-center">
           <p class="text-7xl m-12">
-            Upcomming Events
+            Upcoming Events
           </p>
         </div>
-        <Slideshow />
+        <UpcomingEvents />
       </div>
       <div class="divider"></div> 
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
