@@ -3,10 +3,12 @@ import RecentEvents from '../components/RecentEvents';
 import UpcomingEvents from '../components/UpcomingEvents';
 import habitatLogo from '../resources/HabitatLogo.jpeg';
 
+import './stylesheets/Home.css'
+
 function Home() {
   return (
     <>
-    <img src={habitatLogo}></img>
+    <img src={habitatLogo} className='logo'></img>
     <div class="flex flex-col w-full">
       <div class="grid h-full card bg-base-300 rounded-box place-items-center m-10">
         <div class="text-center">
