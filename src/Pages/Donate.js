@@ -11,11 +11,19 @@ function Donate() {
     const[name, setName] = useState("")
     const[donationAmount, setDonationAmount] = useState(0)
 
+    const [displayStatus, setDisplayStatus] = useState('none')
+    
+    function handleClick() {
+      setDisplayStatus(prevStatus => (prevStatus === 'none' ? 'block' : 'none'))
+    }
+
     const donationRef = collection(db, "donation")
 
     const createDonor = async () => {
         await addDoc(donationRef, { Name: name, donationAmount: donationAmount })
         window.location.reload()
+
+        handleClick()
     }
 
     // After Donation Button Clicked...
@@ -81,7 +89,7 @@ function Donate() {
             })}
         </div>
       </div>
-      <SquarePayments />
+      <SquarePayments displayStatus={displayStatus}/>
     </>
   );
 }
