@@ -24,10 +24,6 @@ function Events() {
                 imgSrc={defaultImg}
                 date='11/27/2023'
             />
-
-            <Event />
-            <Event />
-            <Event />
         </>
     );
 }
