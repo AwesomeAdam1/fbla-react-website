@@ -76,15 +76,15 @@ function Donate() {
           </button>
         </div>
       </div>
-      <div className="text-white mt-20 mx-6">
+      <div className="text-black mt-20 mx-6">
       <h3 className='text-xl'>
-        Users:
+        Recent Donations:
       </h3>
       <div className='grid grid-cols-2'>
           {users.map(user => {
-              return <div className='hover:animate-pulse m-4 bg-gray-600 w-1/4 rounded-md p-2'>
+              return <div className='m-4 bg-gray-300 w-1/4 rounded-md p-2 shadow-md'>
               <p className='w-auto text-center'>{user.Name}</p>
-              <p className='w-auto text-center'>{user.age}</p>
+              <p className='w-auto text-center'>${user.age}</p>
               {/* <button onClick={() => { increaseAge(user.id, user.age) }}>Increase Age</button>
               <button onClick={() => { deleteUser(user.id) }}>Delete User</button> */}
           </div>
