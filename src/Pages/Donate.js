@@ -3,7 +3,6 @@ import { db } from '../firebase-config';
 import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc } from '@firebase/firestore';
 
 function Donate() {
-
     const[users, setUsers] = useState([])
     const[name, setName] = useState("")
     const[age, setAge] = useState(0)
@@ -42,8 +41,7 @@ function Donate() {
     }, [])
   return (
     <>
-      <p className="text-red-500">DONATE</p>
-      <div className="text-white">
+      <div className="text-black">
         <h1 className=" w-screen text-center mt-8 text-4xl font-bold">
           React with FireBase
         </h1>
