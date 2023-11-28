@@ -35,7 +35,6 @@ const EventForm = (props) => {
                 setDoc(doc(db, props.event, nameInput), {
                 name: nameInput,
             })
-
             setNameInput('')
         }
         const newDoc = doc(db, props.event, nameInput)
@@ -51,6 +50,8 @@ const EventForm = (props) => {
             })
             setEmailInput('')
         }
+
+        handleClick()
     }
 
     return(

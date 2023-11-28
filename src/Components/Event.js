@@ -1,15 +1,15 @@
 // React Imports
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Component Import
 import EventForm from './EventForm'
 
 // Firebase Imports
-import { doc, addDoc, collection } from 'firebase/firestore'
+import { doc, addDoc, collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase-config'
 
 function Event(props) {
-    // Create Firebase doc
+    // Create Firebase docs
     const createEventDoc = async (personName) => {
         await addDoc(collection(db, props.name, props.personName), {
             personName: props.personName,
@@ -22,6 +22,7 @@ function Event(props) {
         })
     }
 
+    // Styling
     const eventStyle = {
         backgroundImage: `url(${props.imgSrc})`,
         backgroundRepeat: 'no-repeat',
@@ -30,13 +31,30 @@ function Event(props) {
         backgroundPosition: 'center'
     }
 
+    // EventForm Display Status
     const [displayStatus, setDisplayStatus] = useState('none')
 
     function handleClick() {
         setDisplayStatus(prevStatus => (prevStatus === 'none' ? 'block' : 'none'))
     }
 
-    if (props.pplRegistered === 'Nobody :(' || props.pplRegistered.length === 0) {
+    // Firebase Stuff
+    const[registeredPeople, setRegisteredPeople] = useState([])
+    const[name, setName] = useState("")
+
+    const eventCollectionRef = collection(db, props.name)
+
+    useEffect(() => {
+        const getRegisteredPeopleData = async () => {
+            const data = await getDocs(eventCollectionRef)
+            setRegisteredPeople(data.docs.map((elem) => ({ ...elem.data(), id: elem.id })))
+        }
+    
+        getRegisteredPeopleData()
+    }, [])
+
+    // Return Statements
+    if (registeredPeople.length === 0) {
         return (
             <div className="event" style={eventStyle}>
                 <div className="event-info">
@@ -56,7 +74,6 @@ function Event(props) {
             </div>
         )
     } else {
-
         return (
             <div className="event" style={eventStyle}>
                 <section className="event-info">
@@ -66,7 +83,7 @@ function Event(props) {
 
                 <section className='registration-info'>
                         <div>
-                            <p>Number Registered: {props.pplRegistered.length}</p>
+                            <p>Number Registered: {registeredPeople.length}</p>
                             <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
                         </div>
 
@@ -74,9 +91,9 @@ function Event(props) {
                             <p>People Registered</p>
                             <div className='registered-person-table'>
                                 <table>
-                                    {props.pplRegistered.map(person => (
-                                        <tr>{person}</tr>
-                                    ))}
+                                    {registeredPeople.map(person => {
+                                        return <tr>{person.name}</tr>
+                                    })}
                                 </table>
                             </div>
                         </div>
@@ -92,7 +109,6 @@ Event.defaultProps = {
     name: 'Event',
     date: 'DD/MM/YYYY',
     numRegistered: '0',
-    pplRegistered: 'Nobody :('
 }
 
 export default Event

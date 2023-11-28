@@ -17,14 +17,12 @@ function Events() {
                 name='Gala'
                 imgSrc={galaImg}
                 date='12/31/2023'
-                pplRegistered={['Person 1', 'Person 2', 'Person 3', 'Person 4', 'Person 5']}
             />
             
             <Event
                 name='Fall Festival'
                 imgSrc={defaultImg}
                 date='11/27/2023'
-                pplRegistered={['Person 1', 'Person 2']}
             />
 
             <Event />
