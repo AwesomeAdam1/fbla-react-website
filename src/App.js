@@ -12,10 +12,10 @@ function App() {
             <NavBar />  
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/walton-fbla-website-design/home" element={<Home />} />
-                <Route path="/walton-fbla-website-design/donate" element={<Donate />} />
-                <Route path="/walton-fbla-website-design/about" element={<About />} />
-                <Route path="/walton-fbla-website-design/upcomingevents" element={<UpcomingEvents />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/donate" element={<Donate />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/upcomingevents" element={<UpcomingEvents />} />
             </Routes>
             <footer>
                 <div class="bg-base-300 rounded-box p-2 pl-5 mt-2">
