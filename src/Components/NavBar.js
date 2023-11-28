@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';  
+import habitatLogo from '../resources/HabitatLogo.jpeg';
 
-const NavBar = () => {
+const NavBar = () => {  
  return (
    <div>
      <ul class="menu menu-vertical lg:menu-horizontal bg-base-300 rounded-box w-full">

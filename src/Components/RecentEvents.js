@@ -4,7 +4,7 @@ import defaultImg from '../resources/DefaultImage.jpg'
 function RecentEvents(){
   return (
     <div class="text-center">
-      <div className="carousel w-1/2 h-96 m-2 rounded-2xl">
+      <div className="carousel w-1/2 h-96 m-5 rounded-2xl">
         <div id="slide1" className="carousel-item relative w-full">
           <img src={galaImg} className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

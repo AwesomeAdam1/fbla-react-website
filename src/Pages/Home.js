@@ -1,30 +1,32 @@
 import Quotes from '../components/Quotes';
 import RecentEvents from '../components/RecentEvents';
 import UpcomingEvents from '../components/UpcomingEvents';
+import habitatLogo from '../resources/HabitatLogo.jpeg';
 
 function Home() {
   return (
     <>
+    <img src={habitatLogo}></img>
     <div class="flex flex-col w-full">
-      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center m-10">
         <div class="text-center">
           <p class="text-7xl m-12">
             Upcoming Events
           </p>
         </div>
-        <RecentEvents />
+        <UpcomingEvents />
       </div> 
       <div class="divider w-2/3 mx-auto"></div> 
-      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center m-10">
         <div class="text-center">
           <p class="text-7xl m-12">
             Recent Events
           </p>
         </div>
-        <UpcomingEvents />
+        <RecentEvents />
       </div>
       <div class="divider w-2/3 mx-auto"></div> 
-      <div class="grid h-full card bg-base-300 rounded-box place-items-center">
+      <div class="grid h-full card bg-base-300 rounded-box place-items-center m-10">
       <div class="text-center">
           <p class="text-5xl m-12">
             Volunteer Quotes
