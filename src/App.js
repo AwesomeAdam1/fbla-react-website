@@ -9,8 +9,9 @@ import { NavLink } from 'react-router-dom';
 function App() {
     return (
         <>
-            <NavBar />
+            <NavBar />  
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/donate" element={<Donate />} />
                 <Route path="/about" element={<About />} />
