@@ -32,12 +32,12 @@ const EventForm = (props) => {
         e.preventDefault()
 
         if (nameInput) {
-                setDoc(doc(db, props.event, nameInput), {
+                setDoc(doc(db, event, nameInput), {
                 name: nameInput,
             })
             setNameInput('')
         }
-        const newDoc = doc(db, props.event, nameInput)
+        const newDoc = doc(db, event, nameInput)
         if (phoneInput) {
             updateDoc(newDoc, {
                 phone: phoneInput,        

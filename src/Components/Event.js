@@ -18,7 +18,7 @@ function Event(props) {
 
     function createEventDocs() {
         props.pplRegistered.foreach(person => {
-            createEventDocs(person)
+            createEventDoc(person)
         })
     }
 
