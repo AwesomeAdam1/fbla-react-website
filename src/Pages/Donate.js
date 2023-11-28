@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { db } from '../firebase-config';
 import { collection, getDocs, addDoc } from '@firebase/firestore';
+import styles from './stylesheets/Donate.css'
+
+// Component Imports
+import SquarePayments from '../components/SquarePaymentAPI'
 
 function Donate() {
     const[donors, setDonors] = useState([])
@@ -33,24 +37,28 @@ function Donate() {
           Insert your name and donation amount.
         </p>
         <div className="text-center mt-16">
-          <span>Name : </span>
-          <input
+          <div className="input-container">
+            <span>Name : </span>
+            <input
             className="mx-4 text-black"
             type="text"
             placeholder="Name"
             onChange={(event) => {
               setName(event.target.value);
             }}
-          />
-          <span>Donation Amount : </span>
-          <input
-            className="mx-4 text-black"
-            type="text"
-            placeholder="0"
-            onChange={(event) => {
-              setDonationAmount(event.target.value);
-            }}
-          />
+            />
+          </div>
+          <div className="input-container">
+            <span>Donation Amount : </span>
+            <input
+              className="mx-4 text-black"
+              type="text"
+              placeholder="0"
+              onChange={(event) => {
+                setDonationAmount(event.target.value);
+              }}
+            />
+          </div>
           <br />
           <button
             onClick={createDonor}
@@ -61,18 +69,19 @@ function Donate() {
         </div>
       </div>
       <div className="text-black mt-20 mx-6">
-      <h3 className='text-xl'>
-        Recent Donations:
-      </h3>
-      <div className='grid grid-cols-2'>
-          {donors.map(donor => {
-              return <div className='m-4 bg-gray-300 w-1/4 rounded-md p-2 shadow-md'>
-              <p className='w-auto text-center'>{donor.Name}</p>
-              <p className='w-auto text-center'>${donor.age}</p>
-          </div>
-          })}
+        <h3 className='text-xl'>
+          Recent Donations:
+        </h3>
+        <div className='grid grid-cols-2'>
+            {donors.map(donor => {
+                return <div className='m-4 bg-gray-300 w-1/4 rounded-md p-2 shadow-md'>
+                <p className='w-auto text-center'>{donor.Name}</p>
+                <p className='w-auto text-center'>${donor.donationAmount}</p>
+            </div>
+            })}
+        </div>
       </div>
-</div>
+      <SquarePayments />
     </>
   );
 }
