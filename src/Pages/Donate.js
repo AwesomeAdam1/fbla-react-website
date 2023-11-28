@@ -40,7 +40,7 @@ function Donate() {
           <div className="input-container">
             <span>Name : </span>
             <input
-            className="mx-4 text-black"
+            className="mx-4 text-white"
             type="text"
             placeholder="Name"
             onChange={(event) => {
@@ -51,7 +51,7 @@ function Donate() {
           <div className="input-container">
             <span>Donation Amount : </span>
             <input
-              className="mx-4 text-black"
+              className="mx-4 text-white"
               type="text"
               placeholder="0"
               onChange={(event) => {
