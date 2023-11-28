@@ -1,0 +1,29 @@
+.about-text-1 {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.data {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.data div {
+    display: block;
+    width: 30rem;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 2rem;
+
+    text-align: center;
+    color: whitesmoke;
+}
+
+.data h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
