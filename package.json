@@ -47,5 +47,6 @@
   "devDependencies": {
     "daisyui": "^4.4.7",
     "tailwindcss": "^3.3.5"
-  }
+  },
+  "homepage": "https://vipban.github.io/walton-fbla-website-design/"
 }
