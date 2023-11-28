@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home'
-import Donate from './Pages/Donate';
-import About from './Pages/About';
-import UpcomingEvents from './Pages/UpcomingEvents';
-import NavBar from './Components/NavBar';
+import Home from './pages/Home'
+import Donate from './pages/Donate';
+import About from './pages/About';
+import UpcomingEvents from './pages/UpcomingEvents';
+import NavBar from './components/NavBar';
 
 function App() {
     return (
