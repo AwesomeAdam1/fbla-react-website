@@ -52,16 +52,7 @@ const EventForm = (props) => {
         }
 
         handleClick()
-        
-        let added = false
-        while (!added) {
-            const docs = await getDocs(collection(db, props.event))
-            docs.forEach(doc => {
-                if (doc.name === nameInput)
-                    added = true
-            })
-        }
-        window.location.reload(true)
+        setTimeout(window.location.reload(), 500)
     }
 
     return(

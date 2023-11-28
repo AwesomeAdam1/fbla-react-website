@@ -5,12 +5,20 @@
     height: 100vh;
 }
 
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
 .input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1% 37.5%;
     padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    width: 30rem;
 
     background-color: rgb(51, 65, 85);
     border-radius: 1rem;
@@ -25,9 +33,38 @@ input {
 }
 
 .SquarePayments {
+    width: 30rem;
     margin: 0 37.5%;
 }
 
 button {
     color: white;
+}
+
+.recentDonations {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    padding-right: 3rem;
+}
+
+.recentDonations h3 {
+    font-size: 3rem;
+}
+
+.donor {
+    font-size: 1.5rem;
+    padding: 2rem 25%;
+}
+
+.CreditCard-submit {
+    display: none;
+}
+
+.donateButton {
+    margin-top: -2px;
+    padding: 1rem 2rem;
+    width: 30rem;
+    background-color: blue;
+    border-radius: 8px;
 }

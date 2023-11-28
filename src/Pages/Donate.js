@@ -14,7 +14,7 @@ function Donate() {
     const donationRef = collection(db, "donation")
 
     const createDonor = async () => {
-        await addDoc(donationRef, { Name: name, donationAmount: donationAmount })
+        await addDoc(donationRef, { name: name, donationAmount: donationAmount })
         window.location.reload()
     }
 
@@ -33,10 +33,10 @@ function Donate() {
         <h1 className=" w-screen text-center mt-8 text-4xl font-bold">
           Donate to Walton Habitat for Humanity
         </h1>
-        <p className="w-screen text-center mt-5">
+        <p className="w-screen text-center mt-5 text-xl">
           Insert your name and donation amount.
         </p>
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 inputs-container">
           <div className="input-container">
             <span>Name : </span>
             <input
@@ -63,20 +63,18 @@ function Donate() {
           <div className="SquarePayments"><SquarePayments /></div>
           <button
             onClick={createDonor}
-            className="bg-slate-700 m-4 p-2 w-20 rounded-md"
-          >
-            Donate
-          </button>
+            className="bg-slate-700 m-4 p-2 w-20 rounded-md donateButton"
+          >Donate</button>
         </div>
       </div>
-      <div className="text-black mt-20 mx-6">
-        <h3 className='text-xl'>
-          Recent Donations:
+      <div className="text-black mt-20 mx-6 recentDonations">
+        <h3 className='text-xl font-bold m-5'>
+          Recent Donations
         </h3>
         <div className='grid grid-cols-2'>
             {donors.map(donor => {
-                return <div className='m-4 bg-gray-300 w-1/4 rounded-md p-2 shadow-md'>
-                <p className='w-auto text-center'>{donor.Name}</p>
+                return <div className='m-4 bg-gray-300 rounded-md p-2 shadow-md donor'>
+                <p className='w-auto text-center'>{donor.name}</p>
                 <p className='w-auto text-center'>${donor.donationAmount}</p>
             </div>
             })}
