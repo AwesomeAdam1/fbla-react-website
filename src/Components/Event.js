@@ -1,7 +1,27 @@
+// React Imports
 import React, {useState} from 'react'
+
+// Component Import
 import EventForm from './EventForm'
 
+// Firebase Imports
+import { doc, addDoc, collection } from 'firebase/firestore'
+import { db } from '../firebase-config'
+
 function Event(props) {
+    // Create Firebase doc
+    const createEventDoc = async (personName) => {
+        await addDoc(collection(db, props.name, props.personName), {
+            personName: props.personName,
+        })
+    }
+
+    function createEventDocs() {
+        props.pplRegistered.foreach(person => {
+            createEventDocs(person)
+        })
+    }
+
     const eventStyle = {
         backgroundImage: `url(${props.imgSrc})`,
         backgroundRepeat: 'no-repeat',
