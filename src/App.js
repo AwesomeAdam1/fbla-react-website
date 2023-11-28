@@ -12,10 +12,10 @@ function App() {
             <NavBar />  
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/donate" element={<Donate />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/upcomingevents" element={<UpcomingEvents />} />
+                <Route path="/walton-fbla-website-design/home" element={<Home />} />
+                <Route path="/walton-fbla-website-design/donate" element={<Donate />} />
+                <Route path="/walton-fbla-website-design/about" element={<About />} />
+                <Route path="/walton-fbla-website-design/upcomingevents" element={<UpcomingEvents />} />
             </Routes>
             <footer>
                 <div class="bg-base-300 rounded-box p-2 pl-5 mt-2">
@@ -24,10 +24,10 @@ function App() {
                     </div>
                     <div>
                         <ul class="menu-vertical lg:menu-vertical bg-base-300 rounded-box w-full">
-                            <li><NavLink to="/home">Home</NavLink></li>
-                            <li><NavLink to="/about">About</NavLink></li>
-                            <li><NavLink to="/donate">Donate</NavLink></li>
-                            <li><NavLink to="/upcomingevents">Upcoming Events</NavLink></li>
+                            <li><NavLink to="/walton-fbla-website-design/home">Home</NavLink></li>
+                            <li><NavLink to="/walton-fbla-website-design/about">About</NavLink></li>
+                            <li><NavLink to="/walton-fbla-website-design/donate">Donate</NavLink></li>
+                            <li><NavLink to="/walton-fbla-website-design/upcomingevents">Upcoming Events</NavLink></li>
                         </ul> 
                     </div>                    
                 </div>        

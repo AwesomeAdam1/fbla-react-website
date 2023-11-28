@@ -31,13 +31,16 @@ const EventForm = (props) => {
     const submitHandler = async (e) => {
         e.preventDefault()
 
+        console.log(nameInput, emailInput, phoneInput)
+
+        const nameInputStore = nameInput
         if (nameInput) {
-                setDoc(doc(db, event, nameInput), {
+            setDoc(doc(db, event, nameInput), {
                 name: nameInput,
             })
             setNameInput('')
         }
-        const newDoc = doc(db, event, nameInput)
+        const newDoc = doc(db, event, nameInputStore)
         if (phoneInput) {
             updateDoc(newDoc, {
                 phone: phoneInput,        

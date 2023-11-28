@@ -49,7 +49,7 @@ function Event(props) {
             const data = await getDocs(eventCollectionRef)
             setRegisteredPeople(data.docs.map((elem) => ({ ...elem.data(), id: elem.id })))
         }
-    
+        
         getRegisteredPeopleData()
     }, [])
 
