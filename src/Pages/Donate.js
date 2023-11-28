@@ -4,26 +4,18 @@ import { collection, getDocs, addDoc } from '@firebase/firestore';
 import styles from './stylesheets/Donate.css'
 
 // Component Imports
-import SquarePayments from '../components/SquarePaymentAPI'
+import SquarePayments from '../components/square_api/SquarePaymentAPI'
 
 function Donate() {
     const[donors, setDonors] = useState([])
     const[name, setName] = useState("")
     const[donationAmount, setDonationAmount] = useState(0)
 
-    const [displayStatus, setDisplayStatus] = useState('none')
-    
-    function handleClick() {
-      setDisplayStatus(prevStatus => (prevStatus === 'none' ? 'block' : 'none'))
-    }
-
     const donationRef = collection(db, "donation")
 
     const createDonor = async () => {
         await addDoc(donationRef, { Name: name, donationAmount: donationAmount })
         window.location.reload()
-
-        handleClick()
     }
 
     // After Donation Button Clicked...
@@ -60,7 +52,7 @@ function Donate() {
             <span>Donation Amount : </span>
             <input
               className="mx-4 text-white"
-              type="text"
+              type="number"
               placeholder="0"
               onChange={(event) => {
                 setDonationAmount(event.target.value);
@@ -68,6 +60,7 @@ function Donate() {
             />
           </div>
           <br />
+          <div className="SquarePayments"><SquarePayments /></div>
           <button
             onClick={createDonor}
             className="bg-slate-700 m-4 p-2 w-20 rounded-md"
@@ -89,7 +82,6 @@ function Donate() {
             })}
         </div>
       </div>
-      <SquarePayments displayStatus={displayStatus}/>
     </>
   );
 }

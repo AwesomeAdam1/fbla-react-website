@@ -24,6 +24,10 @@ input {
     border-radius: 8px;
 }
 
+.SquarePayments {
+    margin: 0 37.5%;
+}
+
 button {
     color: white;
 }
