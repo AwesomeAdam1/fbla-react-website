@@ -1,43 +1,27 @@
 import { useEffect, useState } from "react";
 import { db } from '../firebase-config';
-import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc } from '@firebase/firestore';
+import { collection, getDocs, addDoc } from '@firebase/firestore';
 
 function Donate() {
-    const[users, setUsers] = useState([])
+    const[donors, setDonors] = useState([])
     const[name, setName] = useState("")
-    const[age, setAge] = useState(0)
+    const[donationAmount, setDonationAmount] = useState(0)
 
-    const UsersCollectionRef = collection(db, "backenddata")
+    const donationRef = collection(db, "donation")
 
-    const CreateUser = async () => {
-        await addDoc(UsersCollectionRef, { Name: name, age: age })
+    const createDonor = async () => {
+        await addDoc(donationRef, { Name: name, donationAmount: donationAmount })
         window.location.reload()
     }
 
-    // const increaseAge = async (id, age) => {
-    //   const userDoc = doc(db, "backenddata", id)
-    //   const NewAge = { age: Number(age) + 1 }
-    //   console.log("Updated the Data on System")
-    //   await updateDoc(userDoc, NewAge)
-    //   console.log("Updated the Data on the Server")
-    //   window.location.reload()
-    // }
-
-    // const deleteUser = async (id) => {
-    //   const userDoc = doc(db, "backenddata", id)
-    //   console.log("Got the Document ID")
-    //   await deleteDoc(userDoc)
-    //   console.log("Deleted the Document")
-    //   window.location.reload()
-    // }
-
+    // After Donation Button Clicked...
     useEffect(() => {
-        const getUsersData = async () => {
-          const data = await getDocs(UsersCollectionRef)
-          setUsers(data.docs.map((elem) => ({ ...elem.data(), id: elem.id })))
+        const getDonationData = async () => {
+          const data = await getDocs(donationRef)
+          setDonors(data.docs.map((elem) => ({ ...elem.data(), id: elem.id })))
         }
     
-        getUsersData()
+        getDonationData()
     }, [])
   return (
     <>
@@ -64,12 +48,12 @@ function Donate() {
             type="text"
             placeholder="0"
             onChange={(event) => {
-              setAge(event.target.value);
+              setDonationAmount(event.target.value);
             }}
           />
           <br />
           <button
-            onClick={CreateUser}
+            onClick={createDonor}
             className="bg-slate-700 m-4 p-2 w-20 rounded-md"
           >
             Donate
@@ -81,12 +65,10 @@ function Donate() {
         Recent Donations:
       </h3>
       <div className='grid grid-cols-2'>
-          {users.map(user => {
+          {donors.map(donor => {
               return <div className='m-4 bg-gray-300 w-1/4 rounded-md p-2 shadow-md'>
-              <p className='w-auto text-center'>{user.Name}</p>
-              <p className='w-auto text-center'>${user.age}</p>
-              {/* <button onClick={() => { increaseAge(user.id, user.age) }}>Increase Age</button>
-              <button onClick={() => { deleteUser(user.id) }}>Delete User</button> */}
+              <p className='w-auto text-center'>{donor.Name}</p>
+              <p className='w-auto text-center'>${donor.age}</p>
           </div>
           })}
       </div>
