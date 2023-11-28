@@ -4,6 +4,7 @@ import Donate from './pages/Donate';
 import About from './pages/About';
 import UpcomingEvents from './pages/UpcomingEvents';
 import NavBar from './components/NavBar';
+import { NavLink } from 'react-router-dom';  
 
 function App() {
     return (
@@ -15,8 +16,22 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/upcomingevents" element={<UpcomingEvents />} />
             </Routes>
+            <footer>
+                <div class="bg-base-300 rounded-box p-2 pl-5 mt-2">
+                    <div class="text-xl">
+                        Walton Habitat For Humanity
+                    </div>
+                    <div>
+                        <ul class="menu-vertical lg:menu-vertical bg-base-300 rounded-box w-full">
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/donate">Donate</NavLink></li>
+                            <li><NavLink to="/upcomingevents">Upcoming Events</NavLink></li>
+                        </ul> 
+                    </div>                    
+                </div>        
+            </footer>
         </>
-        
     );
 }
 

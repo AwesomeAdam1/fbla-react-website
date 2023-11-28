@@ -9,7 +9,7 @@ function Home() {
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
         <div class="text-center">
           <p class="text-7xl m-12">
-            Recent Events
+            Upcoming Events
           </p>
         </div>
         <RecentEvents />
@@ -18,7 +18,7 @@ function Home() {
       <div class="grid h-full card bg-base-300 rounded-box place-items-center">
         <div class="text-center">
           <p class="text-7xl m-12">
-            Upcoming Events
+            Recent Events
           </p>
         </div>
         <UpcomingEvents />
