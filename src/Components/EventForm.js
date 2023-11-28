@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 // Firebase Imports
-import { doc, setDoc, updateDoc, addDoc, collection, arrayUnion} from 'firebase/firestore'
+import { doc, setDoc, updateDoc, collection, getDocs} from 'firebase/firestore'
 import { db } from '../firebase-config'
 
 const EventForm = (props) => {
@@ -52,6 +52,16 @@ const EventForm = (props) => {
         }
 
         handleClick()
+        
+        let added = false
+        while (!added) {
+            const docs = await getDocs(collection(db, props.event))
+            docs.forEach(doc => {
+                if (doc.name === nameInput)
+                    added = true
+            })
+        }
+        window.location.reload(true)
     }
 
     return(
