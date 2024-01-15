@@ -11,7 +11,7 @@ function App() {
         <>
             <NavBar />  
             <Routes>
-                <Route path="/walton-fbla-website-design/" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/donate" element={<Donate />} />
                 <Route path="/about" element={<About />} />
