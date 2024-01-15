@@ -3,7 +3,7 @@ import Home from './Pages/Home'
 import Donate from './Pages/Donate';
 import About from './Pages/About';
 import UpcomingEvents from './Pages/UpcomingEvents';
-import NavBar from './components/NavBar';
+import NavBar from './Components/NavBar';
 import { NavLink } from 'react-router-dom';  
 
 function App() {

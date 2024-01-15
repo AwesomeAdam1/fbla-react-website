@@ -1,9 +1,9 @@
-import Quotes from '../components/Quotes';
-import RecentEvents from '../components/RecentEvents';
-import UpcomingEvents from '../components/UpcomingEvents';
-import habitatLogo from '../resources/HabitatLogo.jpeg';
+import Quotes from '../Components/Quotes';
+import RecentEvents from '../Components/RecentEvents';
+import UpcomingEvents from '../Components/UpcomingEvents';
+import habitatLogo from '../Resources/HabitatLogo.jpeg';
 
-import './stylesheets/Home.css'
+import './Stylesheets/Home.css'
 
 function Home() {
   return (

@@ -1,5 +1,5 @@
-import galaImg from '../resources/GalaPhoto.jpg'
-import defaultImg from '../resources/DefaultImage.jpg'
+import galaImg from '../Resources/GalaPhoto.jpg'
+import defaultImg from '../Resources/DefaultImage.jpg'
 
 function RecentEvents(){
   return (

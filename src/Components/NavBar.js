@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';  
-import habitatLogo from '../resources/HabitatLogo.jpeg';
+import habitatLogo from '../Resources/HabitatLogo.jpeg';
 
 const NavBar = () => {  
  return (

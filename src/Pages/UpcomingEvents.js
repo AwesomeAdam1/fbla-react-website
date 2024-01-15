@@ -1,12 +1,12 @@
 // Styling
-import './stylesheets/UpcomingEvents.css'
+import './Stylesheets/UpcomingEvents.css'
 
 // Component Imports
-import Event from '../components/Event'
+import Event from '../Components/Event'
 
 // Event Images
-import galaImg from '../resources/GalaPhoto.jpg'
-import defaultImg from '../resources/DefaultImage.jpg'
+import galaImg from '../Resources/GalaPhoto.jpg'
+import defaultImg from '../Resources/DefaultImage.jpg'
 
 function Events() {
     return (
