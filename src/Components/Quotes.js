@@ -1,6 +1,6 @@
 function Quotes(){
     return ( 
-        <div className="text-center mx-2"> 
+        <div className="text-center m-2"> 
             <div className="card w-1/2 bg-base-100 shadow-xl m-2 inline-block">
                 <div className="card-body">
                     <h2 className="card-title">Jesse</h2>
