@@ -3,8 +3,8 @@ import defaultImg from '../Resources/DefaultImage.jpg'
 
 function UpcomingEvents(){
   return (
-    <div class="text-center aspect-video">
-      <div className="carousel w-1/2 h-96 m-5 rounded-2xl">
+    <div class="text-center">
+      <div className="carousel w-1/2 h-96 m-5 rounded-2xl aspect-video">
         <div id="slide1a" className="carousel-item relative w-full">
           <img src={galaImg} className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
