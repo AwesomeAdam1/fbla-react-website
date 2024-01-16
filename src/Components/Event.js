@@ -27,7 +27,6 @@ function Event(props) {
         backgroundImage: `url(${props.imgSrc})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '40vh',
         backgroundPosition: 'center'
     }
 
@@ -56,50 +55,54 @@ function Event(props) {
     // Return Statements
     if (registeredPeople.length === 0) {
         return (
-            <div className="event" style={eventStyle}>
-                <div className="event-info">
-                    <h1>{props.name}</h1>
-                    <p className="date">{props.date}</p>
-                </div>
-
-                <div className='registration-info'>
-                    <div>
-                        <p>Number Registered: 0</p>
-                        <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
+            <div className='event-container'>
+                <div className="event" style={eventStyle}>
+                    <div className="event-info">
+                        <h1>{props.name}</h1>
+                        <p className="date">{props.date}</p>
                     </div>
-                    <p>No People Registered</p>
-                </div>
 
-                <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
+                    <div className='registration-info'>
+                        <div>
+                            <p>Number Registered: 0</p>
+                            <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
+                        </div>
+                        <p>No People Registered</p>
+                    </div>
+
+                    <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
+                </div>
             </div>
         )
     } else {
         return (
-            <div className="event" style={eventStyle}>
-                <section className="event-info">
-                    <h1>{props.name}</h1>
-                    <p className="date">{props.date}</p>
-                </section>
+            <div className='event-container'>
+                <div className="event" style={eventStyle}>
+                    <section className="event-info">
+                        <h1>{props.name}</h1>
+                        <p className="date">{props.date}</p>
+                    </section>
 
-                <section className='registration-info'>
-                        <div>
-                            <p>Number Registered: {registeredPeople.length}</p>
-                            <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
-                        </div>
-
-                        <div>
-                            <p>People Registered</p>
-                            <div className='registered-person-table'>
-                                <table>
-                                    {registeredPeople.map(person => {
-                                        return <tr>{person.name}</tr>
-                                    })}
-                                </table>
+                    <section className='registration-info'>
+                            <div>
+                                <p>Number Registered: {registeredPeople.length}</p>
+                                <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
                             </div>
-                        </div>
-                </section>
 
-                <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
+                            <div>
+                                <p>People Registered</p>
+                                <div className='registered-person-table'>
+                                    <table>
+                                        {registeredPeople.map(person => {
+                                            return <tr>{person.name}</tr>
+                                        })}
+                                    </table>
+                                </div>
+                            </div>
+                    </section>
+
+                    <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>
+                </div>
             </div>
         )
     }

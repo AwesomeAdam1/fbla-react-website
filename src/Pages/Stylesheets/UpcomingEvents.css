@@ -3,7 +3,14 @@ h1 {
     font-size: 4rem;
     font-weight: bold;
 }
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+}
 .event {
+    flex-grow: 1;
+
     margin: 2%;
     padding: 0 5%;
 
