@@ -9,6 +9,7 @@ body {
 .nav {
     color: white;
     display: flex;
+    z-index: 1000;
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
