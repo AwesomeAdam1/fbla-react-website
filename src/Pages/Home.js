@@ -44,7 +44,7 @@
 // export default Home;
 
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
-import './stylesheets/header.css'
+import './Stylesheets/header.css'
 
 export default function Header() {
     function handleClick() {
