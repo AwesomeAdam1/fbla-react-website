@@ -23,7 +23,7 @@ function App() {
                         Walton Habitat For Humanity
                     </div>
                     <div>
-                        <ul class="menu-vertical lg:menu-vertical bg-base-300 rounded-box w-full">
+                        <ul class="menu-vertical lg:menu-vertical w-full">
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about">About</NavLink></li>
                             <li><NavLink to="/donate">Donate</NavLink></li>
