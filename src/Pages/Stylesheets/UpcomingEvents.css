@@ -148,4 +148,8 @@ h1 {
         flex-direction: column;
         justify-content: flex-start;
     }
+
+    .date {
+        position: static;
+    }
 }
