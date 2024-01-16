@@ -11,7 +11,7 @@ import defaultImg from '../Resources/DefaultImage.jpg'
 function Events() {
     return (
         <>
-            <h1 class="text-5xl font-bold">Upcoming Events</h1>
+            <h1 class="text-5xl font-bold my-8">Upcoming Events</h1>
 
             <Event
                 name='Gala'

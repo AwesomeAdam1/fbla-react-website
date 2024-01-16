@@ -3,7 +3,7 @@ import './Stylesheets/About.css'
 function About() {
     return (
         <>
-            <h1 class="text-5xl font-bold">Walton Habitat</h1>
+            <h1 class="text-5xl font-bold my-8">Walton Habitat</h1>
             <p className='about-text-1'>Walton Habitat is the Walton High school Chapter of Northwest Metro Atlanta Habitat for Humanity. Our goal is to provide affordable, decent housing for those who would normally be unable to afford it.</p>
             
             <section className='data'>
