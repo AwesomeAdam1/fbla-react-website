@@ -30,7 +30,7 @@ function Donate() {
   return (
     <>
       <div className="text-black">
-        <h1 className=" w-screen text-center mt-8 text-4xl font-bold">
+        <h1 className=" w-screen text-center mt-8 text-5xl font-bold">
           Donate to Walton Habitat for Humanity
         </h1>
         <p className="w-screen text-center mt-5 text-xl">
