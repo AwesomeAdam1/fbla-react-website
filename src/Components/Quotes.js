@@ -1,7 +1,7 @@
 function Quotes(){
     return ( 
         <div className="text-center m-2"> 
-            <div className="card bg-base-100 shadow-xl m-2 inline-block aspect-ratio: 16 / 9">
+            <div className="card bg-base-100 shadow-xl m-2 inline-block aspect-video">
                 <div className="card-body">
                     <h2 className="card-title">Jesse</h2>
                     <p>"Walton Habitat for Humanity has provided help and support for the community."</p>
