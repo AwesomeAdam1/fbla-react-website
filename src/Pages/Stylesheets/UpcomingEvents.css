@@ -67,7 +67,7 @@ h1 {
 
 .registered-person-table tr {
     display: block;
-    padding-left: 1rem;
+    box-shadow: 0 0 0 0 #0e1111;
 }
 
 .registered-person-table tr:not(:first-child) {
@@ -89,6 +89,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 5%;
+    margin-bottom: 5vh;
     z-index: 3;
 
     background-color: rgba(112, 128, 144, 0.975);
