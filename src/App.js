@@ -18,7 +18,7 @@ function App() {
                 <Route path="/upcomingevents" element={<UpcomingEvents />} />
             </Routes>
             <footer>
-                <div class="bg-base-300 rounded-box p-2 pl-5 mt-2">
+                <div class="p-2 pl-5 mt-2">
                     <div class="text-xl">
                         Walton Habitat For Humanity
                     </div>
