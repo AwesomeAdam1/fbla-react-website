@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ul li a {
-  color: #000;
+  color: white;
 }
  
 ul li a:hover {
