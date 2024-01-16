@@ -27,7 +27,7 @@ function Event(props) {
         backgroundImage: `url(${props.imgSrc})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '20rem',
+        height: '40vh',
         backgroundPosition: 'center'
     }
 
