@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { db } from '../firebase-config';
 import { collection, getDocs, addDoc } from '@firebase/firestore';
-import styles from './stylesheets/Donate.css'
+import styles from './Stylesheets/Donate.css'
 
 // Component Imports
-import SquarePayments from '../components/square_api/SquarePaymentAPI'
+import SquarePayments from '../Components/square_api/SquarePaymentAPI'
 
 function Donate() {
     const[donors, setDonors] = useState([])

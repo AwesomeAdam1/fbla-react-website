@@ -1,6 +1,6 @@
 // Client Side
 import { PaymentForm, CreditCard } from 'react-square-web-payments-sdk'
-import styles from '../../pages/stylesheets/Donate.css'
+import styles from '../../Pages/Stylesheets/Donate.css'
 
 function SquarePayments() {
     return (
