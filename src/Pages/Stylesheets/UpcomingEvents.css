@@ -16,7 +16,6 @@ h1 {
 
 .event-info {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -145,5 +144,8 @@ h1 {
 }
 
 @media only screen and (orientation: portrait) {
-
+    .event-info {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
