@@ -23,7 +23,7 @@ function App() {
                     </div>
                     <div>
                         <ul class="menu-vertical lg:menu-vertical bg-base-300 rounded-box w-full">
-                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about">About</NavLink></li>
                             <li><NavLink to="/donate">Donate</NavLink></li>
                             <li><NavLink to="/upcomingevents">Upcoming Events</NavLink></li>
