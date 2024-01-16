@@ -4,7 +4,8 @@ import Donate from './Pages/Donate';
 import About from './Pages/About';
 import UpcomingEvents from './Pages/UpcomingEvents';
 import NavBar from './Components/NavBar';
-import { NavLink } from 'react-router-dom';  
+import { NavLink } from 'react-router-dom';
+import './App.css';
 
 function App() {
     return (
