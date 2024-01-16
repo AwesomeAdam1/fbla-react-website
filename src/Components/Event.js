@@ -67,7 +67,7 @@ function Event(props) {
                         <p>Number Registered: 0</p>
                         <button className='event-registration-button' onClick={handleClick}>Register for {props.name}</button>
                     </div>
-                    <p>People Registered: Nobody :(</p>
+                    <p>No People Registered</p>
                 </div>
 
                 <EventForm displayStatus={displayStatus} event={props.name} handleClick={handleClick}/>

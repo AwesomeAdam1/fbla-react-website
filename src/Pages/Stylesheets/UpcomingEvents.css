@@ -16,6 +16,7 @@ h1 {
 
 .event-info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -61,7 +62,6 @@ h1 {
 .registered-person-table tr {
     display: block;
     padding-left: 1rem;
-    border: solid .125rem white;
 }
 
 .registered-person-table tr:not(:first-child) {
@@ -142,4 +142,8 @@ h1 {
 
 .x:hover {
     cursor: pointer;
+}
+
+@media only screen and (orientation: portrait) {
+
 }
