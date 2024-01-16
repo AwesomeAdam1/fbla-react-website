@@ -3,7 +3,7 @@ import defaultImg from '../Resources/DefaultImage.jpg'
 
 function UpcomingEvents(){
   return (
-    <div class="text-center">
+    <div class="text-center aspect-video">
       <div className="carousel w-1/2 h-96 m-5 rounded-2xl">
         <div id="slide1a" className="carousel-item relative w-full">
           <img src={galaImg} className="w-full" />
