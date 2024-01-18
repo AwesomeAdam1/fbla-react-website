@@ -38,7 +38,7 @@ function Donate() {
         </p>
         <div className="text-center mt-16 inputs-container">
           <div className="input-container">
-            <span>Name : </span>
+            <span>Name: </span>
             <input
             className="mx-4 text-white"
             type="text"
@@ -49,7 +49,7 @@ function Donate() {
             />
           </div>
           <div className="input-container">
-            <span>Donation Amount : </span>
+            <span>Donation Amount: </span>
             <input
               className="mx-4 text-white"
               type="number"
@@ -63,7 +63,7 @@ function Donate() {
           <div className="SquarePayments"><SquarePayments /></div>
           <button
             onClick={createDonor}
-            className="bg-slate-700 m-4 p-2 w-20 rounded-md donateButton"
+            className="bg-slate-700 m-4 p-2 w-20 rounded-md donateButton text-white"
           >Donate</button>
         </div>
       </div>
