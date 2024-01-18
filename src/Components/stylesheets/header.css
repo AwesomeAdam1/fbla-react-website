@@ -66,6 +66,7 @@ body {
     .mobile-nav {
         display: flex;
         align-items: center;
+        z-index: 99999;
 
         --bar-width: 60px;
         --bar-height: 8px;
